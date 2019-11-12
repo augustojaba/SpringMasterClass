@@ -1,10 +1,11 @@
 package com.jabacode.spring.basics.springin5steps;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Primary
 @Component
+@Qualifier("quick")
 public class QuickSortAlgorithm implements SortAlgorithm {
 
     @Override
