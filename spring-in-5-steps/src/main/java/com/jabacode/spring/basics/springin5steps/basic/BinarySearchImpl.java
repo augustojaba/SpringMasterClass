@@ -1,5 +1,7 @@
 package com.jabacode.spring.basics.springin5steps.basic;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySearchImpl {
 
+    private static Logger LOGGER = LoggerFactory.getLogger(BinarySearchImpl.class);
 
     @Autowired
     @Qualifier("quick")
@@ -27,5 +30,14 @@ public class BinarySearchImpl {
         return 3;
     }
 
+    //@PostConstruct
+    public void postConstruct() {
+        LOGGER.info("Post construct");
+    }
+
+    //@PreDestroy
+    public void preDestroy() {
+        LOGGER.info("Pre destroy");
+    }
 
 }
