@@ -3,7 +3,6 @@ package com.jabacode.spring.basics.springin5steps;
 import com.jabacode.spring.basics.componentscan.componentscan.ComponentDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,10 +15,11 @@ public class SpringIn5StepsComponentApplication {
 
 	public static void main(String[] args) {
 
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsComponentApplication.class);
+		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsComponentApplication.class)) {
 
-		ComponentDAO componentDAO = applicationContext.getBean(ComponentDAO.class);
+			ComponentDAO componentDAO = applicationContext.getBean(ComponentDAO.class);
 
-		LOGGER.info("{}", componentDAO);
+			LOGGER.info("{}", componentDAO);
+		}
 	}
 }
