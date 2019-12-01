@@ -1,4 +1,4 @@
-package com.jabacode.spring.basics.componentscan.componentscan;
+package com.jabacode.spring.basics.springin5steps.componentscan;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;

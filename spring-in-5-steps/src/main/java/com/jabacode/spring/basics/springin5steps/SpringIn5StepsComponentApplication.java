@@ -1,6 +1,6 @@
 package com.jabacode.spring.basics.springin5steps;
 
-import com.jabacode.spring.basics.componentscan.componentscan.ComponentDAO;
+import com.jabacode.spring.basics.springin5steps.componentscan.ComponentDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
