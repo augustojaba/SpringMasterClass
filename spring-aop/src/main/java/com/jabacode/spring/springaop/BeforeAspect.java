@@ -1,6 +1,5 @@
 package com.jabacode.spring.springaop;
 
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -12,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
 @Aspect
 public class BeforeAspect {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+  private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Before("execution(* com.jabacode.spring.springaop.businesslogic*.* .* (..))")
-    public void before(JoinPoint joinPoint) {
-        LOGGER.info("Intercepted {}", joinPoint);
-    }
+  @Before("execution(* com.jabacode.spring.springaop.businesslogic*.* .* (..))")
+  public void before(JoinPoint joinPoint) {
+    LOGGER.info("Intercepted {}", joinPoint);
+  }
 }

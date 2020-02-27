@@ -10,19 +10,20 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan
-//app.properties
+// app.properties
 @PropertySource("classpath:app.properties")
 public class SpringIn5StepsPropertiesApplication {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsXmlApplication.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsXmlApplication.class);
 
-	public static void main(String[] args) {
+  public static void main(final String[] args) {
 
-		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsPropertiesApplication.class)) {
-			SomeExternalService service = applicationContext.getBean(SomeExternalService.class);
+    try (final AnnotationConfigApplicationContext applicationContext =
+        new AnnotationConfigApplicationContext(SpringIn5StepsPropertiesApplication.class)) {
+      final SomeExternalService service = applicationContext.getBean(SomeExternalService.class);
 
-			String result = service.returnServiceURl();
-			LOGGER.info("Service: {}; Result: {}", service, result);
-		}
-	}
+      final String result = service.returnServiceURl();
+      LOGGER.info("Service: {}; Result: {}", service, result);
+    }
+  }
 }

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class SomeExternalService {
 
-    //Value from properties file
-    @Value("${external.service.url}")
-    private String url;
+  // Value from properties file
+  @Value("${external.service.url}")
+  private String url;
 
-    public String returnServiceURl() {
-        return url;
-    }
+  public String returnServiceURl() {
+    return url;
+  }
 }

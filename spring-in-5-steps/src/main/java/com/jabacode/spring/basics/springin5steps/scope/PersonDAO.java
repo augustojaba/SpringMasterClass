@@ -6,14 +6,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class PersonDAO {
 
-    @Autowired
-    JdbcConnection jdbcConnection;
+  @Autowired JdbcConnection jdbcConnection;
 
-    public JdbcConnection getJdbcConnection() {
-        return jdbcConnection;
-    }
+  public JdbcConnection getJdbcConnection() {
+    return jdbcConnection;
+  }
 
-    public void setJdbcConnection(JdbcConnection jdbcConnection) {
-        this.jdbcConnection = jdbcConnection;
-    }
+  public void setJdbcConnection(JdbcConnection jdbcConnection) {
+    this.jdbcConnection = jdbcConnection;
+  }
 }

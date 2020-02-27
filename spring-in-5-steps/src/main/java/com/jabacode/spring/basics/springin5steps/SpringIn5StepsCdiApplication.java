@@ -12,14 +12,15 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class SpringIn5StepsCdiApplication {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsCdiApplication.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsCdiApplication.class);
 
-	public static void main(String[] args) {
+  public static void main(final String[] args) {
 
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsCdiApplication.class);
+    final ApplicationContext applicationContext =
+        new AnnotationConfigApplicationContext(SpringIn5StepsCdiApplication.class);
 
-		SomeCDIBusiness someCDIBusiness = applicationContext.getBean(SomeCDIBusiness.class);
+    final SomeCDIBusiness someCDIBusiness = applicationContext.getBean(SomeCDIBusiness.class);
 
-		LOGGER.info("{} - dao {}", someCDIBusiness, someCDIBusiness.getSomeCDIDAO());
-	}
+    LOGGER.info("{} - dao {}", someCDIBusiness, someCDIBusiness.getSomeCDIDAO());
+  }
 }

@@ -9,35 +9,34 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySearchImpl {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(BinarySearchImpl.class);
+  private static Logger LOGGER = LoggerFactory.getLogger(BinarySearchImpl.class);
 
-    @Autowired
-    @Qualifier("quick")
-    SortAlgorithm sortAlgorithm;
+  @Autowired
+  @Qualifier("quick")
+  SortAlgorithm sortAlgorithm;
 
-    public int binarySearch(int[] numbers, int numberToSearchFor) {
+  public int binarySearch(int[] numbers, int numberToSearchFor) {
 
-        // Sorting an array
+    // Sorting an array
 
-        //SortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
-        int[] sortedNumbers = sortAlgorithm.sort(numbers);
-        System.out.println(sortAlgorithm);
-        // Bubble Sort Algorithm
-        // Quick Sort Algorithm
+    // SortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+    int[] sortedNumbers = sortAlgorithm.sort(numbers);
+    System.out.println(sortAlgorithm);
+    // Bubble Sort Algorithm
+    // Quick Sort Algorithm
 
-        // Search the array
+    // Search the array
 
-        return 3;
-    }
+    return 3;
+  }
 
-    //@PostConstruct
-    public void postConstruct() {
-        LOGGER.info("Post construct");
-    }
+  // @PostConstruct
+  public void postConstruct() {
+    LOGGER.info("Post construct");
+  }
 
-    //@PreDestroy
-    public void preDestroy() {
-        LOGGER.info("Pre destroy");
-    }
-
+  // @PreDestroy
+  public void preDestroy() {
+    LOGGER.info("Pre destroy");
+  }
 }

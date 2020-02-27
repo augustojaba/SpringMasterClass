@@ -11,15 +11,17 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.jabacode.spring.basics.componentscan")
 public class SpringIn5StepsComponentApplication {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsComponentApplication.class);
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(SpringIn5StepsComponentApplication.class);
 
-	public static void main(String[] args) {
+  public static void main(final String[] args) {
 
-		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsComponentApplication.class)) {
+    try (final AnnotationConfigApplicationContext applicationContext =
+        new AnnotationConfigApplicationContext(SpringIn5StepsComponentApplication.class)) {
 
-			ComponentDAO componentDAO = applicationContext.getBean(ComponentDAO.class);
+      final ComponentDAO componentDAO = applicationContext.getBean(ComponentDAO.class);
 
-			LOGGER.info("{}", componentDAO);
-		}
-	}
+      LOGGER.info("{}", componentDAO);
+    }
+  }
 }

@@ -2,13 +2,13 @@ package com.jabacode.spring.basics.springin5steps.xml;
 
 public class XmlPersonDAO {
 
-    XmlJdbcConnection xmlJdbcConnection;
+  XmlJdbcConnection xmlJdbcConnection;
 
-    public XmlJdbcConnection getXmlJdbcConnection() {
-        return xmlJdbcConnection;
-    }
+  public XmlJdbcConnection getXmlJdbcConnection() {
+    return xmlJdbcConnection;
+  }
 
-    public void setXmlJdbcConnection(XmlJdbcConnection xmlJdbcConnection) {
-        this.xmlJdbcConnection = xmlJdbcConnection;
-    }
+  public void setXmlJdbcConnection(XmlJdbcConnection xmlJdbcConnection) {
+    this.xmlJdbcConnection = xmlJdbcConnection;
+  }
 }

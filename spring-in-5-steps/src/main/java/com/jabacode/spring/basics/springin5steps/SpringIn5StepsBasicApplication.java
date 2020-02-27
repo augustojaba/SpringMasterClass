@@ -9,13 +9,14 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class SpringIn5StepsBasicApplication {
 
-	public static void main(String[] args) {
+  public static void main(final String[] args) {
 
-		try(AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class)) {
-			BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+    try (final AnnotationConfigApplicationContext applicationContext =
+        new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class)) {
+      final BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 
-			int result = binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
-			System.out.println(result);
-		}
-	}
+      final int result = binarySearch.binarySearch(new int[] {12, 4, 6}, 3);
+      System.out.println(result);
+    }
+  }
 }

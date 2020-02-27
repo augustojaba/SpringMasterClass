@@ -12,21 +12,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringAopApplication implements CommandLineRunner {
 
-	private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+  private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-	@Autowired
-	private Business1 business1;
+  @Autowired private Business1 business1;
 
-	@Autowired
-	private Business2 business2;
+  @Autowired private Business2 business2;
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringAopApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(SpringAopApplication.class, args);
+  }
 
-	@Override
-	public void run(String... args) throws Exception {
-		LOGGER.info(business1.calculateSomething());
-		LOGGER.info(business2.calculateSomething());
-	}
+  @Override
+  public void run(String... args) throws Exception {
+    LOGGER.info(business1.calculateSomething());
+    LOGGER.info(business2.calculateSomething());
+  }
 }
